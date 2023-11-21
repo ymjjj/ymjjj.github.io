@@ -6,7 +6,7 @@
   <link href="https://ymjjj.github.io/atom.xml" rel="self"/>
   
   <link href="https://ymjjj.github.io/"/>
-  <updated>2023-01-24T02:22:51.816Z</updated>
+  <updated>2023-11-21T13:27:35.380Z</updated>
   <id>https://ymjjj.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://ymjjj.github.io/2023/11/21/stm32/"/>
+    <id>https://ymjjj.github.io/2023/11/21/stm32/</id>
+    <published>2023-11-21T13:07:47.271Z</published>
+    <updated>2023-11-21T13:27:35.380Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;title:     STM32笔记&lt;br&gt;date: 2023-11-21 21:10:00&lt;br&gt;img ：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>新年快乐</title>
@@ -165,6 +186,60 @@
     <title>Hello World</title>
     <link href="https://ymjjj.github.io/2023/01/12/hello-world/"/>
     <id>https://ymjjj.github.io/2023/01/12/hello-world/</id>
+    <published>2023-01-12T13:43:00.000Z</published>
+    <updated>2023-01-14T01:12:28.702Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;写于2023年1月12日&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Hello-world&quot;&gt;&lt;a href=&quot;#Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Hello</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://ymjjj.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="随笔" scheme="https://ymjjj.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://ymjjj.github.io/2023/01/12/bi-ji/"/>
+    <id>https://ymjjj.github.io/2023/01/12/bi-ji/</id>
+    <published>2023-01-12T13:43:00.000Z</published>
+    <updated>2023-11-17T07:51:23.032Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;写于2023年1月12日&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://ymjjj.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://ymjjj.github.io/2023/01/12/zhi-san-ge-yue-hou-de-zi-ji/"/>
+    <id>https://ymjjj.github.io/2023/01/12/zhi-san-ge-yue-hou-de-zi-ji/</id>
     <published>2023-01-12T13:43:00.000Z</published>
     <updated>2023-01-14T01:12:28.702Z</updated>
     
