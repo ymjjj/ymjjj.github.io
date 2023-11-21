@@ -1,0 +1,1836 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="STM32学习笔记, 路边驿站">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>STM32学习笔记 | 路边驿站</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="路边驿站" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">路边驿站</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">路边驿站</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/ymjjj/picture-bed/main/blog_photo2023-11-21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">STM32学习笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                                <span class="chip bg-color">单片机</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-category">
+                                知识
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-11-21
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="STM32"><a href="#STM32" class="headerlink" title="STM32"></a>STM32</h1><h2 id="STM32概况"><a href="#STM32概况" class="headerlink" title="STM32概况"></a>STM32概况</h2><h3 id="STM32简介"><a href="#STM32简介" class="headerlink" title="STM32简介"></a>STM32简介</h3><p>STM32是ST公司基于ARM Cortex-M内核开发的32位微控制器</p>
+<blockquote>
+<p>ST指ST公司，M指微控制器(microcontroller),32指该单片机为32位</p>
+<p>在计算机中，32位通常指的是数据总线或处理器的寄存器大小，即32位二进制数的长度。它表示每个数据传输或处理的最大位数为32位，也就是4个字节（byte）。</p>
+<p>在32位计算机系统中，每个内存地址都可以用32位二进制数表示，因此可以寻址的内存空间大小为2的32次方，即4GB。这也意味着32位计算机可以处理32位大小的整数和浮点数，以及使用32位指针来访问内存。</p>
+<p>对于32位和64位机器，一部分数据类型所占据的大小不同</p>
+<table>
+<thead>
+<tr>
+<th align="left">数据类型</th>
+<th align="left">32位系统</th>
+<th align="left">64位系统</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>char</code></td>
+<td align="left">1字节</td>
+<td align="left">1字节</td>
+</tr>
+<tr>
+<td align="left"><code>char*</code>(指 所有指针变量)</td>
+<td align="left">4字节</td>
+<td align="left">8字节</td>
+</tr>
+<tr>
+<td align="left"><code>short int</code></td>
+<td align="left">2字节</td>
+<td align="left">2字节</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left">4字节</td>
+<td align="left">4字节</td>
+</tr>
+<tr>
+<td align="left"><code>unsigned int</code></td>
+<td align="left">4字节</td>
+<td align="left">4字节</td>
+</tr>
+<tr>
+<td align="left"><code>float</code></td>
+<td align="left">4字节</td>
+<td align="left">4字节</td>
+</tr>
+<tr>
+<td align="left"><code>double</code></td>
+<td align="left">8字节</td>
+<td align="left">8字节</td>
+</tr>
+<tr>
+<td align="left"><code>long</code></td>
+<td align="left">4字节</td>
+<td align="left">8字节</td>
+</tr>
+<tr>
+<td align="left"><code>long long</code></td>
+<td align="left">8字节</td>
+<td align="left">8字节</td>
+</tr>
+<tr>
+<td align="left"><code>unsigned long</code></td>
+<td align="left">4字节</td>
+<td align="left">8字节</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>在本笔记中，使用的stm32型号为STM32F103C8T6</p>
+<p>STM32F103C8T6:</p>
+<p>•系列：主流系列STM32F1</p>
+<p>•内核：ARM Cortex-M3</p>
+<p>•主频：72MHz</p>
+<p>•RAM：20K（SRAM）</p>
+<p>•ROM：64K（Flash）</p>
+<p>•供电：2.0~3.6V（标准3.3V）</p>
+<p>•封装：LQFP48</p>
+<blockquote>
+<p>RAM是英文Random Access Memory的缩写，中文称为随机存取存储器，也叫主存或内存。它是计算机中用于临时存储数据和程序的重要部件。</p>
+<p>ROM是英文Read-Only Memory的缩写，中文称为只读存储器。与RAM不同，ROM是一种只能读取而不能写入的存储器，它通常用于储存计算机系统的固件、BIOS、引导程序和操作系统等程序和数据。</p>
+<p>RAM和ROM是计算机中两种不同类型的存储器，它们在以下几方面有所不同：</p>
+<ol>
+<li>功能：RAM用于临时存储数据和程序，是计算机的主存储器，数据可以被读取和写入。ROM用于存储程序和数据，是只读存储器，数据只能被读取而不能被写入。</li>
+<li>可擦写性：RAM是可写的存储器，数据可以随时被写入和修改，但容易丢失；而ROM是只读存储器，一般情况下不可被修改，但有一些可擦写的ROM也可以被擦除和重新编程。</li>
+<li>数据保持性：RAM需要持续的电源供应来维持数据的存储状态，一旦电源中断，其中存储的数据就会丢失。而ROM不需要持续的电源供应来维持数据的存储状态，数据可以长期保持。</li>
+<li>容量和速度：RAM的容量通常较大，可以达到几个GB或更大，但读取和写入速度相对较慢。ROM通常容量较小，但读取速度较快，可以用于存储固件、BIOS、引导程序和操作系统等程序和数据。</li>
+<li>价格：RAM的价格相对较高，但价格随着容量的提高而逐渐下降。ROM的价格相对较低，但价格随着可擦写性和容量的提高而逐渐上升。</li>
+</ol>
+</blockquote>
+<h3 id="STM32外设"><a href="#STM32外设" class="headerlink" title="STM32外设"></a>STM32外设</h3><table>
+<thead>
+<tr>
+<th><strong>英文缩写</strong></th>
+<th><strong>名称</strong></th>
+<th><strong>英文缩写</strong></th>
+<th><strong>名称</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NVIC</td>
+<td>嵌套向量中断控制器</td>
+<td>CAN</td>
+<td>CAN通信</td>
+</tr>
+<tr>
+<td>SysTick</td>
+<td>系统滴答定时器</td>
+<td>USB</td>
+<td>USB通信</td>
+</tr>
+<tr>
+<td>RCC</td>
+<td>复位和时钟控制</td>
+<td>RTC</td>
+<td>实时时钟</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>通用IO口</td>
+<td>CRC</td>
+<td>CRC校验</td>
+</tr>
+<tr>
+<td>AFIO</td>
+<td>复用IO口</td>
+<td>PWR</td>
+<td>电源控制</td>
+</tr>
+<tr>
+<td>EXTI</td>
+<td>外部中断</td>
+<td>BKP</td>
+<td>备份寄存器</td>
+</tr>
+<tr>
+<td>TIM</td>
+<td>定时器</td>
+<td>IWDG</td>
+<td>独立看门狗</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>模数转换器</td>
+<td>WWDG</td>
+<td>窗口看门狗</td>
+</tr>
+<tr>
+<td>DMA</td>
+<td>直接内存访问</td>
+<td>DAC</td>
+<td>数模转换器</td>
+</tr>
+<tr>
+<td>USART</td>
+<td>同步/异步串口通信</td>
+<td>SDIO</td>
+<td>SD卡接口</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>I2C通信</td>
+<td>FSMC</td>
+<td>可变静态存储控制器</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>SPI通信</td>
+<td>USB OTG</td>
+<td>USB主机接口</td>
+</tr>
+</tbody></table>
+<h3 id="STM32命名规则"><a href="#STM32命名规则" class="headerlink" title="STM32命名规则"></a>STM32命名规则</h3><p>STM32 F 103 C 8 T 6</p>
+<p>产品系列：STM32—基于ARM核心的32位微处理器</p>
+<p>产品类型：F           —通用系列</p>
+<p>产品子系列： 101—基本型（102——USB基本型，103——增强型···）</p>
+<p>引脚数目：C —48脚</p>
+<p>闪存储存器容量：8—64K字节的闪存储存器</p>
+<p>封装： T —LQFT</p>
+<p>温度范围：6—工业级温度范围：-40——85</p>
+<h3 id="STM32结构"><a href="#STM32结构" class="headerlink" title="STM32结构"></a>STM32结构</h3><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/stm32_系统结构_1.png">
+
+
+
+<p>以下主要引自参考手册：</p>
+<p>在小容量、中容量和 大容量产品中，主系统由以下部分构成：</p>
+<p> ● 四个驱动单元： ─ Cortex™-M3内核DCode总线(D-bus)，和系统总线(S-bus) </p>
+<p>​                                   ─ 通用DMA1和通用DMA2 </p>
+<p> ● 四个被动单元： ─ 内部SRAM </p>
+<p>​                                  ─ 内部闪存存储器</p>
+<p>​                                  ─ FSMC</p>
+<p>​                                   ─ AHB到APB的桥(AHB2APBx)，它连接所有的APB设备</p>
+<p>这些都是通过一个多级的AHB总线构架相互连接的，如上图所示</p>
+<blockquote>
+<p>可以把驱动单元理解成是内核部分，被动单元都理解成外设,而驱动单元和外设都是通过各条总线连接的</p>
+</blockquote>
+<p>对于各总线：</p>
+<p><strong>ICode总线</strong></p>
+<p>该总线将Cortex™-M3内核的指令总线与闪存指令接口相连接。指令预取在此总线上完成。</p>
+<blockquote>
+<p>ICode总线是专门用来取指令的，其中的I表示Instruction（指令），指令的意思。写好的程序编译之后都是一条条指令，存放在 FLASH中，内核通过ICode总线读取这些指令来执行程序。</p>
+</blockquote>
+<p>**DCode总线 **</p>
+<p>该总线将Cortex™-M3内核的DCode总线与闪存存储器的数据接口相连接(常量加载和调试访 问)。</p>
+<blockquote>
+<p>DCode这条总线是用来取数的，其中的D表示Data（数据）。在写程序的时候，数据有常量和变量两种。常量就是固定不变的，用C语言中的const关键字修饰，放到内部FLASH当中。变量是可变的，不管是全局变量还是局部变量都放在内部的SRAM。</p>
+</blockquote>
+<p>**系统总线 **</p>
+<p>此总线连接Cortex™-M3内核的系统总线(外设总线)到总线矩阵，总线矩阵协调着内核和DMA间 的访问。</p>
+<blockquote>
+<p>我们通常说的寄存器编程，即读写寄存器都是通过系统总线来完成的，系统总线主要是用来访问外设的寄存器。</p>
+</blockquote>
+<p>**DMA总线 **</p>
+<p>此总线将DMA的AHB主控接口与总线矩阵相联，总线矩阵协调着CPU的DCode和DMA到 SRAM、闪存和外设的访问</p>
+<blockquote>
+<p>DMA总线也主要是用来传输数据，这个数据可以是在某个外设的数据寄存器，可以在SRAM，可以在内部FLASH.<br>因为数据可以被Dcode总线，也可以被DMA总线访问，为了避免访问冲突，在取数的时候需要经过一个总线矩阵来仲裁，决定哪个总线在取数。</p>
+</blockquote>
+<p>**总线矩阵 **</p>
+<p>总线矩阵协调内核系统总线和DMA主控总线之间的访问仲裁，仲裁利用轮换算法。在其它产品中总线 矩阵包含4个驱动部件(CPU的DCode、系统总线、DMA1总线和DMA2总线)和4个被动部件(闪存 存储器接口(FLITF)、SRAM、FSMC和AHB2APB桥)。 AHB外设通过总线矩阵与系统总线相连，允许DMA访问 </p>
+<p><strong>AHB/APB桥(APB)</strong> </p>
+<p>两个AHB/APB桥在AHB和2个APB总线间提供同步连接。APB1操作速度限于36MHz，APB2操 作于全速(最高72MHz)</p>
+<blockquote>
+<p>桥接是将两个或多个网络连接起来，使它们可以互相通信的技术。</p>
+</blockquote>
+<p><strong>内部的闪存存储器Flash</strong><br>内部的闪存存储器即FLASH，编写好的程序就放在这个地方。内核通过ICode总线来取里面的指令。</p>
+<p><strong>内部的SRAM</strong><br>内部的SRAM，是通常所说的内存，程序中的变量、堆栈等的开销都是基于内部SRAM，内核通过DCode总线来访问它。</p>
+<p><strong>FSMC</strong><br>FSMC的英文全称是Flexible static memory controller（灵活的静态的存储器控制器）。通过FSMC可以扩展内存，如外部的SRAM、NAND-FLASH和NORFLASH.但FSMC只能扩展静态的内存，不能是动态的内存，比如就不能用来扩展SDRAM。</p>
+<p><strong>AHB</strong><br>从AHB总线延伸出来的两条APB2和APB1总线是最常见的总线，GPIO、串口、I2C、SPI 这些外设就挂载在这两条总线上。这个是学习STM32的重点，要学会对这些外设编程，去驱动外部的各种设备。</p>
+<h3 id="引脚定义"><a href="#引脚定义" class="headerlink" title="引脚定义"></a>引脚定义</h3><p>引脚是电子元器件、集成电路或其他电子设备上的金属接头或插针，用于与其他电子设备连接或传输信号、控制电路等。引脚通常是设备的物理接口，通过引脚可以将设备连接到其他电子设备或电路中。</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E5%BC%95%E8%84%9A%E5%AE%9A%E4%B9%89_1.png"></p>
+<p>图中橙色为电源相关引脚</p>
+<p>蓝色为最小系统板相关引脚</p>
+<p>绿色为I/O口，功能引脚等</p>
+<p>在类型这一项中，s代表电源，I代表输入，o代表输出。</p>
+<p>而在I/O口容忍电平这一项中，FT代表最高可容忍5v电压</p>
+<h3 id="STM32启动配置"><a href="#STM32启动配置" class="headerlink" title="STM32启动配置"></a>STM32启动配置</h3><p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE_1.png"></p>
+<p>启动配置是为了确定程序开始的位置</p>
+<p>一般情况下，程序在主闪存存储器启动</p>
+<p>但也可以通过启动配置，使其在其他位置启动，以完成特殊功能</p>
+<h3 id="STM32最小系统电路"><a href="#STM32最小系统电路" class="headerlink" title="STM32最小系统电路"></a>STM32最小系统电路</h3><p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E7%94%B5%E8%B7%AF_1.png"></p>
+<h2 id="GPIO"><a href="#GPIO" class="headerlink" title="GPIO"></a>GPIO</h2><h3 id="GPIO概况"><a href="#GPIO概况" class="headerlink" title="GPIO概况"></a>GPIO概况</h3><ol>
+<li>GPIO(General Purpose Input Output)通用输入输出口</li>
+<li>可配置八种输入输出格式</li>
+<li>引脚电平0v-3.3v，部分容忍5伏（容忍5v即可以输出5v的电压但输出最大为3.3伏）（在引脚定义中有FT的即能容忍5v电压）</li>
+<li>输出模式下可控制端口输出高低电平来进行控制</li>
+<li>输入模式下可以读取端口的高低电压或电平，常用于读取按键输入等</li>
+</ol>
+<blockquote>
+<p>1.在嵌入式系统中，端口通常指的是设备或芯片与外部世界进行通信的物理接口或连接点。在嵌入式系统中，这些端口可以是电气端口，如引脚或插座，也可以是逻辑端口，如软件接口或通讯协议。</p>
+</blockquote>
+<h3 id="GPIO基本结构"><a href="#GPIO基本结构" class="headerlink" title="GPIO基本结构"></a>GPIO基本结构</h3><p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/GPIO_%E7%BB%93%E6%9E%84_1.png"></p>
+<ol>
+<li>GPIO都是挂设在APB2外设总线上的</li>
+</ol>
+<blockquote>
+<p> 系统总线：系统总线是一种嵌入式系统中用于连接不同硬件模块和设备的通信系统。它是一组共享物理通信线路和协议，用于在多个设备之间传输数据和控制信息。系统总线可以大大简化硬件设计和软件开发，提高系统的灵活性和可扩展性。</p>
+<p>AHB系统总线：AHB（Advanced High-performance Bus）系统总线是ARM公司推出的一种高性能、高可靠性的总线标准，主要用于连接ARM处理器核心和外围设备，是ARM处理器的一部分。AHB总线支持高性能数据传输和多个主设备并行访问，具有灵活性、可扩展性和可靠性等优点。</p>
+<p>APB系统总线：APB（Advanced Peripheral Bus）系统总线是ARM公司推出的一种低功耗、低成本的总线标准，用于连接嵌入式系统中的外围设备和处理器核心。APB总线支持低功耗模式和多个从设备共享总线，是ARM处理器的一部分。</p>
+<p>APB总线通常用于连接嵌入式系统中的外围设备，如定时器、串口、GPIO等。与AHB总线相比，APB总线的传输速度较慢，但功耗更低，适合于低功耗、低成本的嵌入式系统。ARM公司还推出了其他系统总线标准，如AHB总线和AXI（Advanced eXtensible Interface）总线，用于连接不同类型的硬件设备和处理器核心。</p>
+<p>在计算机领域，Peripheral（外围设备）指的是连接到计算机系统中的各种硬件设 备，如键盘、鼠标、显示器、打印机、扫描仪、存储设备等。这些设备通常与计算机主体不直接相连，而是通过各种接口和总线连接到计算机系统中。</p>
+<p>外围设备的作用是扩展计算机系统的功能和性能，为用户提供更加丰富、方便的应用环境。例如，键盘和鼠标是常见的输入设备，用于向计算机输入数据和指令；显示器是常见的输出设备，用于显示计算机处理结果和用户交互界面；存储设备则用于存储和读取数据和程序。</p>
+<p>在计算机科学中，Bus通常指的是一组物理线路或信号传输介质，用于连接多个计算机硬件设备或子系统，实现数据、地址和控制信息的传输和交换。Bus可以理解为一种通信通道或数据传输路径，用于连接不同的硬件设备和组件，以实现数据交换和控制。</p>
+<p>Bus通常由多个线路组成，包括数据线、地址线、控制线等，用于传输不同类型的信息。例如，数据线用于传输实际的数据；地址线用于指定数据的存储位置；控制线用于传输控制信号，如时钟信号、读写信号、中断信号等。</p>
+<p>计算机中的Bus可以分为多种类型，如系统总线、内存总线、I/O总线等。其中，系统总线用于连接计算机的主要硬件组件，如处理器、内存、输入输出设备等；内存总线用于连接处理器和内存；I/O总线用于连接处理器和外部设备。</p>
+</blockquote>
+<ol start="2">
+<li>GPIO名称是按GPIOA，GPIOB，GPIOC来命名的</li>
+<li>每个GPIO有16个引脚（Pin）编号从0到15编号，命名规则为P+GPIO的编号+引脚编号。如GPIOA的引脚编号为PA0,PA1······</li>
+</ol>
+<blockquote>
+<p>在电子电路中，引脚（Pin）是连接电子元件和电路板之间的接口，通常是一个金属片或针脚。引脚通常用于连接电子元件和电路板之间的信号、电源和地等信号，以实现信号的输入、输出和功耗的传递。</p>
+</blockquote>
+<ol start="4">
+<li>GPIO中主要是寄存器和驱动器</li>
+</ol>
+<blockquote>
+<p>寄存器（Register）是计算机系统中用于存储和处理数据的一种高速、低容量的存储器件。寄存器通常位于CPU（中央处理器）内部，并与CPU的指令集密切相关，负责执行指令和处理数据。</p>
+<p>GPIO中寄存器的每一位对应一个引脚</p>
+<p>输出时寄存器写1，对应引脚输出高电平；写0，对应引脚输出低电平</p>
+<p>输入时寄存器读1，对应引脚为高电平    ；读0，对应引脚为低电平</p>
+<p>驱动器：增强信号的驱动能力</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/GPIO%E4%BD%8D%E7%BB%93%E6%9E%84_1.png"></p>
+<p>对于GPIO的每个引脚，其结构如图所示：</p>
+<p>对于上图，可分为上下两部分，上方为输入部分，下方为输出部分</p>
+<p>对于上方输入部分，</p>
+<p>I/O引脚的保护二极管起保护作用，防止过高或过低电压损害电路</p>
+<p>之后上拉电阻与下拉电阻，可配置输入模式(上拉输入，下拉输入，浮空输入)</p>
+<p>肖特基触发器可进行整流</p>
+<p>对于下方输出部分</p>
+<p>寄存器可以进行数据的输出</p>
+<p>在输出驱动器中，我们可以通过控制P_MOS和N_MOS的开关来进行配置输出的推挽开漏或者关闭模式</p>
+<blockquote>
+<p>关于mos管详细内容，请看以下链接：</p>
+<p>[一文讲明白MOS管工作原理](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/392933031">一文讲明白MOS管工作原理 - 知乎 (zhihu.com)</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/519594505">几分钟教你搞定mos管的工作原理，图文+案例，通俗易懂，快收藏 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<h3 id="GPIO模式"><a href="#GPIO模式" class="headerlink" title="GPIO模式"></a>GPIO模式</h3><table>
+<thead>
+<tr>
+<th><strong>模式名称</strong></th>
+<th><strong>性质</strong></th>
+<th><strong>特征</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>浮空输入</td>
+<td>数字输入</td>
+<td>可读取引脚电平，若引脚悬空，则电平不确定</td>
+</tr>
+<tr>
+<td>上拉输入</td>
+<td>数字输入</td>
+<td>可读取引脚电平，内部连接上拉电阻，悬空时默认高电平</td>
+</tr>
+<tr>
+<td>下拉输入</td>
+<td>数字输入</td>
+<td>可读取引脚电平，内部连接下拉电阻，悬空时默认低电平</td>
+</tr>
+<tr>
+<td>模拟输入</td>
+<td>模拟输入</td>
+<td>GPIO无效，引脚直接接入内部ADC</td>
+</tr>
+<tr>
+<td>开漏输出</td>
+<td>数字输出</td>
+<td>可输出引脚电平，高电平为高阻态，低电平接VSS</td>
+</tr>
+<tr>
+<td>推挽输出</td>
+<td>数字输出</td>
+<td>可输出引脚电平，高电平接VDD，低电平接VSS</td>
+</tr>
+<tr>
+<td>复用开漏输出</td>
+<td>数字输出</td>
+<td>由片上外设控制，高电平为高阻态，低电平接VSS</td>
+</tr>
+<tr>
+<td>复用推挽输出</td>
+<td>数字输出</td>
+<td>由片上外设控制，高电平接VDD，低电平接VSS</td>
+</tr>
+</tbody></table>
+<p> <img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%BE%93%E5%85%A5%E6%A8%A1%E5%BC%8F_1.png">   </p>
+<p>上拉输入：上拉输入模式中，上拉电阻开，这样在I/O引脚未输入电压时默认为高电平</p>
+<p>下拉输入：在下拉输入模式中，下拉电阻开，这样在I/O引脚未输入电压时默认为低电平</p>
+<p>浮空输入：两电阻均关</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E6%A8%A1%E6%8B%9F%E8%BE%93%E5%85%A5.png"></p>
+<p>模拟输入：信号直接自引脚输入到外设，不过GPIO</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%BE%93%E5%87%BA%E6%A8%A1%E5%BC%8F.png"></p>
+<p>开漏输出：P_MOS无效，</p>
+<p>推挽输出：P_MOS,N_MOS均有效</p>
+<blockquote>
+<p><strong>在输出模式下，输入模式是有效的，但在输入模式下输出是无效的</strong></p>
+<p>在推挽输出时，P_MOS,N_MOS均有效，当输出1时P_MOS导通，N_MOS断开，输出高电平，反之，输出低电平（存疑）</p>
+<p>在推挽输出时，STM32对I/O口有绝对控制权，输出高低电平由STM32决定</p>
+<p>开漏输出时，P_MOS无效，N_MOS有效</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%BE%93%E5%87%BA%E6%A8%A1%E5%BC%8F_2.png"></p>
+<p>复用开漏输出  /复用推挽输出  ：与开漏输出，推挽输出类似 ，不过是由片上外设进行输出</p>
+<ol>
+<li>上拉输入 : GPIO 上拉输入是指将 GPIO 引脚连接到一个高电平（通常是 3.3V 或 5V），这样当 GPIO 引脚没有被连接到任何外部设备时，它就会处于高电平状态。GPIO 上拉输入可以防止 GPIO 引脚在没有被连接到任何外部设备时产生不确定的状态。</li>
+<li>下拉输入:下拉输入是指将 GPIO 引脚连接到一个低电平（通常是 0V），这样当 GPIO 引脚没有被连接到任何外部设备时，它就会处于低电平状态。下拉输入可以防止 GPIO 引脚在没有被连接到任何外部设备时产生不确定的状态。</li>
+<li>浮空输入:浮空输入是指 GPIO 引脚没有连接到任何外部设备，也不连接到任何内部电阻。当 GPIO 引脚处于浮空状态时，它的状态是未定义的。</li>
+<li>模拟输入:模拟输入是指可以输入连续的模拟信号的 GPIO 引脚。模拟输入通常用于读取外部设备的模拟信号，例如温度传感器或光敏电阻。</li>
+<li>开漏输出:</li>
+<li>推挽输出</li>
+<li>复用开漏输出</li>
+<li>复用推挽输出</li>
+</ol>
+<h3 id="GPIO输出"><a href="#GPIO输出" class="headerlink" title="GPIO输出"></a>GPIO输出</h3><h4 id="外设—LED灯"><a href="#外设—LED灯" class="headerlink" title="外设—LED灯"></a>外设—LED灯</h4><h5 id="LED灯结构"><a href="#LED灯结构" class="headerlink" title="LED灯结构"></a>LED灯结构</h5><p>发光二极管，正向通电点亮，反向通电不亮</p>
+<p>长脚为正极，短脚为负极</p>
+<p>LED常用接线方法：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/LED_1.png"></p>
+<p>低电平接法：STM32输出低电平点亮，高电平关闭</p>
+<h5 id="LED灯闪烁"><a href="#LED灯闪烁" class="headerlink" title="LED灯闪烁"></a>LED灯闪烁</h5><p>接线图：</p>
+<p>![](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/ymjjj/picture-bed/main/3-1">https://raw.githubusercontent.com/ymjjj/picture-bed/main/3-1</a> LED闪烁.jpg)</p>
+<p>对于最小系统板，3.3可提供正极，GND（G）提供负极LED灯正极连在正极，负极连在STM32的一接口上，在这里我们选择PA0接口</p>
+<blockquote>
+<p>使用GPIO接口步骤：   1.RCC开启GPIO时钟</p>
+<p>   ​                                          2.GPIO_Init初始化GPIO</p>
+<p>​                                          3.使用输入输出函数控制GPIO口</p>
+</blockquote>
+<p>RCC常用函数：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">RCC_AHBPeriphClockCmd</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> RCC_AHBPeriph<span class="token punctuation">,</span> FunctionalState NewState<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//AHB外设时钟控制</span>
+<span class="token keyword">void</span> <span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> RCC_APB2Periph<span class="token punctuation">,</span> FunctionalState NewState<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//APB2外设时钟控制</span>
+<span class="token keyword">void</span> <span class="token function">RCC_APB1PeriphClockCmd</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> RCC_APB1Periph<span class="token punctuation">,</span> FunctionalState NewState<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//APB1外设时钟控制</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>功能：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">RCC_AHBPeriphClockCmd</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> RCC_AHBPeriph<span class="token punctuation">,</span> FunctionalState NewState<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//AHB外设时钟控制</span>
+<span class="token comment">/**
+  * @brief  Enables or disables the AHB peripheral clock.
+            使能或失能AHB外设时钟
+  * @param  RCC_AHBPeriph: specifies the AHB peripheral to gates its clock.
+     参数：  RCC_AHBPeriph: 指定要使能或关闭的时钟
+  *
+  *   For @b STM32_Connectivity_line_devices, this parameter can be any combination
+  *   of the following values:        
+  *     @arg RCC_AHBPeriph_DMA1
+        显然RCC_AHBPeriph_DMA1为宏定义标志符，代表对应的数字
+  *     @arg RCC_AHBPeriph_DMA2
+  *     @arg RCC_AHBPeriph_SRAM
+  *     @arg RCC_AHBPeriph_FLITF
+  *     @arg RCC_AHBPeriph_CRC
+  *     @arg RCC_AHBPeriph_OTG_FS    
+  *     @arg RCC_AHBPeriph_ETH_MAC   
+  *     @arg RCC_AHBPeriph_ETH_MAC_Tx
+  *     @arg RCC_AHBPeriph_ETH_MAC_Rx
+  * 
+  *   For @b other_STM32_devices, this parameter can be any combination of the 
+  *   following values:        
+  *     @arg RCC_AHBPeriph_DMA1
+  *     @arg RCC_AHBPeriph_DMA2
+  *     @arg RCC_AHBPeriph_SRAM
+  *     @arg RCC_AHBPeriph_FLITF
+  *     @arg RCC_AHBPeriph_CRC
+  *     @arg RCC_AHBPeriph_FSMC
+  *     @arg RCC_AHBPeriph_SDIO
+  *   
+  * @note SRAM and FLITF clock can be disabled only during sleep mode.
+  * @param  NewState: new state of the specified peripheral clock.
+     参数    NewState: 指定要使能或关闭的时钟状态
+  *   This parameter can be: ENABLE or DISABLE.
+                        值为： ENABLE 或 DISABLE.
+  * @retval None
+  */</span>
+<span class="token keyword">void</span> <span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> RCC_APB2Periph<span class="token punctuation">,</span> FunctionalState NewState<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//APB2外设时钟控制</span>
+<span class="token comment">/**
+  * @brief  Enables or disables the High Speed APB (APB2) peripheral clock.
+  * @param  RCC_APB2Periph: specifies the APB2 peripheral to gates its clock.
+  *   This parameter can be any combination of the following values:
+  *     @arg RCC_APB2Periph_AFIO, RCC_APB2Periph_GPIOA, RCC_APB2Periph_GPIOB,
+  *          RCC_APB2Periph_GPIOC, RCC_APB2Periph_GPIOD, RCC_APB2Periph_GPIOE,
+  *          RCC_APB2Periph_GPIOF, RCC_APB2Periph_GPIOG, RCC_APB2Periph_ADC1,
+  *          RCC_APB2Periph_ADC2, RCC_APB2Periph_TIM1, RCC_APB2Periph_SPI1,
+  *          RCC_APB2Periph_TIM8, RCC_APB2Periph_USART1, RCC_APB2Periph_ADC3,
+  *          RCC_APB2Periph_TIM15, RCC_APB2Periph_TIM16, RCC_APB2Periph_TIM17,
+  *          RCC_APB2Periph_TIM9, RCC_APB2Periph_TIM10, RCC_APB2Periph_TIM11     
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */</span>
+<span class="token keyword">void</span> <span class="token function">RCC_APB1PeriphClockCmd</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> RCC_APB1Periph<span class="token punctuation">,</span> FunctionalState NewState<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//APB1外设时钟控制</span>
+<span class="token comment">/**
+  * @brief  Enables or disables the Low Speed APB (APB1) peripheral clock.
+  * @param  RCC_APB1Periph: specifies the APB1 peripheral to gates its clock.
+  *   This parameter can be any combination of the following values:
+  *     @arg RCC_APB1Periph_TIM2, RCC_APB1Periph_TIM3, RCC_APB1Periph_TIM4,
+  *          RCC_APB1Periph_TIM5, RCC_APB1Periph_TIM6, RCC_APB1Periph_TIM7,
+  *          RCC_APB1Periph_WWDG, RCC_APB1Periph_SPI2, RCC_APB1Periph_SPI3,
+  *          RCC_APB1Periph_USART2, RCC_APB1Periph_USART3, RCC_APB1Periph_USART4, 
+  *          RCC_APB1Periph_USART5, RCC_APB1Periph_I2C1, RCC_APB1Periph_I2C2,
+  *          RCC_APB1Periph_USB, RCC_APB1Periph_CAN1, RCC_APB1Periph_BKP,
+  *          RCC_APB1Periph_PWR, RCC_APB1Periph_DAC, RCC_APB1Periph_CEC,
+  *          RCC_APB1Periph_TIM12, RCC_APB1Periph_TIM13, RCC_APB1Periph_TIM14
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>GPIO库函数：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">GPIO_DeInit</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//函数用于复位GPIO外设</span>
+<span class="token keyword">void</span> <span class="token function">GPIO_AFIODeInit</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//函数用于复位AFIO外设</span>
+<span class="token keyword">void</span> <span class="token function">GPIO_Init</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">,</span> GPIO_InitTypeDef<span class="token operator">*</span> GPIO_InitStruct<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//初始化GPIO口</span>
+<span class="token keyword">void</span> <span class="token function">GPIO_StructInit</span><span class="token punctuation">(</span>GPIO_InitTypeDef<span class="token operator">*</span> GPIO_InitStruct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/*GPIO读取函数*/</span>
+<span class="token class-name">uint8_t</span> <span class="token function">GPIO_ReadInputDataBit</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">,</span> <span class="token class-name">uint16_t</span> GPIO_Pin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">uint16_t</span> <span class="token function">GPIO_ReadInputData</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">uint8_t</span> <span class="token function">GPIO_ReadOutputDataBit</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">,</span> <span class="token class-name">uint16_t</span> GPIO_Pin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">uint16_t</span> <span class="token function">GPIO_ReadOutputData</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/*GPIO写入函数*/</span>
+<span class="token keyword">void</span> <span class="token function">GPIO_SetBits</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">,</span> <span class="token class-name">uint16_t</span> GPIO_Pin<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将指定端口设为高电平</span>
+<span class="token keyword">void</span> <span class="token function">GPIO_ResetBits</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">,</span> <span class="token class-name">uint16_t</span> GPIO_Pin<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将指定端口设为低电平</span>
+<span class="token keyword">void</span> <span class="token function">GPIO_WriteBit</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">,</span> <span class="token class-name">uint16_t</span> GPIO_Pin<span class="token punctuation">,</span> BitAction BitVal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">GPIO_Write</span><span class="token punctuation">(</span>GPIO_TypeDef<span class="token operator">*</span> GPIOx<span class="token punctuation">,</span> <span class="token class-name">uint16_t</span> PortVal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>具体代码：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"stm32f10x.h"</span>                  <span class="token comment">// Device header</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Delay.h"</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">/*开启时钟*/</span>
+	<span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span> RCC_APB2Periph_GPIOA<span class="token punctuation">,</span>ENABLE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/*初始化*/</span>
+	GPIO_InitTypeDef GPIO_InitStructure<span class="token punctuation">;</span>
+	GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Mode<span class="token operator">=</span> GPIO_Mode_Out_PP<span class="token punctuation">;</span>
+	GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Pin<span class="token operator">=</span>GPIO_Pin_0<span class="token punctuation">;</span>
+	GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Speed<span class="token operator">=</span>GPIO_Speed_50MHz<span class="token punctuation">;</span>
+	<span class="token function">GPIO_Init</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span><span class="token operator">&amp;</span>GPIO_InitStructure<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+	<span class="token function">GPIO_SetBits</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span>GPIO_Pin_0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将某个引脚的值设为1，使LED初始状态为管=关</span>
+	
+	<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">GPIO_WriteBit</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span>GPIO_Pin_0<span class="token punctuation">,</span>Bit_RESET<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">Delay_ms</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">GPIO_WriteBit</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span>GPIO_Pin_0<span class="token punctuation">,</span>Bit_SET<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">Delay_ms</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token punctuation">}</span>
+	
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>流水灯代码：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#include "stm32f10x.h"                  // Device header
+#include "Delay.h"
+
+int main(void)
+{
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    /*引脚的初始化也可用位或运算GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2······*/
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
+	
+	while (1)
+	{
+		/*
+		GPIO_Write函数：GPIO_Write 函数将 PortVal 值写入 GPIOx 的输出数据寄存器
+		其中PortVal 值是 16 位值（16位的二进制数），它指定了要写入 GPIOx 输出数据寄存器的值。该值的每一位
+		可以是 0 或 1，其中 0 表 示输出低电平，1 表示输出高电平。又由于c语言无法表示二进制数，用16位代替
+		
+		
+		*/
+        GPIO_Write(GPIOA,~0x0001);
+        /*0x0001即0000 0000 0000 0001，~代表取反，使只有0号引脚低电平点亮 */
+		Delay_ms(500);
+		GPIO_Write(GPIOA,~0x0002);
+		Delay_ms(500);
+		GPIO_Write(GPIOA,~0x0004);
+		Delay_ms(500);
+		GPIO_Write(GPIOA,~0x0008);
+		Delay_ms(500);
+		GPIO_Write(GPIOA,~0x0010);
+		Delay_ms(500);
+		GPIO_Write(GPIOA,~0x0020);
+		Delay_ms(500);
+		GPIO_Write(GPIOA,~0x0040);
+		Delay_ms(500);
+		GPIO_Write(GPIOA,~0x0080);
+		Delay_ms(500);
+	}
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="GPIO输入"><a href="#GPIO输入" class="headerlink" title="GPIO输入"></a>GPIO输入</h3><h4 id="按键输入"><a href="#按键输入" class="headerlink" title="按键输入"></a>按键输入</h4><p>按键执行逻辑：按下后电路联通，松手后断开</p>
+<p>按键电路</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E6%8C%89%E9%94%AE%E2%80%94%E2%80%941.png"></p>
+<p>K1按下，PA0输入为低电平，K1松手，按键断开，PA0不确定，所以采用上拉输入模式</p>
+<p>所以大体思路为通过读取按键的输入来控制输出，进而控制LED</p>
+<p>首先进行初始化</p>
+<p>然后读取按键值，如果按下，则改变输出</p>
+<h4 id="光敏传感器"><a href="#光敏传感器" class="headerlink" title="光敏传感器"></a>光敏传感器</h4><p>![](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/ymjjj/picture-bed/main/3-5">https://raw.githubusercontent.com/ymjjj/picture-bed/main/3-5</a> 光敏传感器控制蜂鸣器.jpg)</p>
+<p>对于光敏传感器，DO灯亮表示有光，输出低电平，反之，输出高电平</p>
+<h2 id="中断系统"><a href="#中断系统" class="headerlink" title="中断系统"></a>中断系统</h2><h3 id="中断系统介绍"><a href="#中断系统介绍" class="headerlink" title="中断系统介绍"></a>中断系统介绍</h3><p>•中断：在主程序运行过程中，出现了特定的中断触发条件（中断源），使得CPU暂停当前正在运行的程序，转而去处理中断程序，处理            完成后又返回原来被暂停的位置继续运行</p>
+<p>•中断优先级：当有多个中断源同时申请中断时，CPU会根据中断源的轻重缓急进行裁决，优先响应更加紧急的中断源</p>
+<p>•中断嵌套：当一个中断程序正在运行时，又有新的更高优先级的中断源申请中断，CPU再次暂停当前中断程序，转而去处理新的中断程                          序，处理完成后依次进行返回</p>
+<h3 id="STM32中断"><a href="#STM32中断" class="headerlink" title="STM32中断"></a>STM32中断</h3><p>•68个可屏蔽中断通道，包含EXTI、TIM、ADC、USART、SPI、I2C、RTC等多个外设</p>
+<p>•使用NVIC统一管理中断，每个中断通道都拥有16个可编程的优先等级，可对优先级进行分组，进一步设置抢占优先级和响应优先级</p>
+<h3 id="NVIC基本结构"><a href="#NVIC基本结构" class="headerlink" title="NVIC基本结构"></a>NVIC基本结构</h3><p>NVIC（Nested Vectored Interrupt Controller）是用于中断管理的关键组件之一。它负责管理和分配中断请求，并控制中断的优先级。</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/NVIC%E7%BB%93%E6%9E%84.png"></p>
+<h4 id="NVIC优先级分组"><a href="#NVIC优先级分组" class="headerlink" title="NVIC优先级分组"></a>NVIC优先级分组</h4><p>•NVIC的中断优先级由优先级寄存器的4位（0~15）决定，这4位可以进行切分，分为高n位的抢占优先级和低4-n位的响应优先级</p>
+<p>•抢占优先级高的可以中断嵌套，响应优先级高的可以优先排队，抢占优先级和响应优先级均相同的按中断号排队</p>
+<table>
+<thead>
+<tr>
+<th><strong>分组方式</strong></th>
+<th><strong>抢占优先级</strong></th>
+<th><strong>响应优先级</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分组0</td>
+<td>0位，取值为0</td>
+<td>4位，取值为0~15</td>
+</tr>
+<tr>
+<td>分组1</td>
+<td>1位，取值为0~1</td>
+<td>3位，取值为0~7</td>
+</tr>
+<tr>
+<td>分组2</td>
+<td>2位，取值为0~3</td>
+<td>2位，取值为0~3</td>
+</tr>
+<tr>
+<td>分组3</td>
+<td>3位，取值为0~7</td>
+<td>1位，取值为0~1</td>
+</tr>
+<tr>
+<td>分组4</td>
+<td>4位，取值为0~15</td>
+<td>0位，取值为0</td>
+</tr>
+</tbody></table>
+<h3 id="EXIT外部中断"><a href="#EXIT外部中断" class="headerlink" title="EXIT外部中断"></a>EXIT外部中断</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>•EXTI（Extern Interrupt）外部中断</p>
+<p>•EXTI可以监测指定GPIO口的电平信号，当其指定的GPIO口产生电平变化时，EXTI将立即向NVIC发出中断申请，经过NVIC裁决后即可中断CPU主程序，使CPU执行EXTI对应的中断程序</p>
+<p>•支持的触发方式：上升沿/下降沿/双边沿/软件触发</p>
+<blockquote>
+<p>上升沿： 低电平到高电平触发中断</p>
+<p>下降沿：高电平到低电平触发中断</p>
+<p>双边沿：上升沿和下降沿都可以触发中断</p>
+<p>软件触发：相应程序的代码可以触发中断</p>
+</blockquote>
+<p>•支持的GPIO口：所有GPIO口，但相同的Pin不能同时触发中断</p>
+<blockquote>
+<p><strong>相同的Pin不能同时触发中断</strong>:比如，PA0,PB0不能同时触发中断</p>
+</blockquote>
+<p>•通道数：16个GPIO_Pin，外加PVD输出、RTC闹钟、USB唤醒、以太网唤醒</p>
+<blockquote>
+<p>16各GPIO_Pin接口对应了从GPIO_Pin_1到GPIO_Pin_15，我认为，其解释了所有GPIO口，但相同的Pin不能同时触发中断的原因</p>
+<p>（存疑）</p>
+<p>外部中断功能可以从低功耗模式的停止模式下唤醒STM32</p>
+</blockquote>
+<p>•触发响应方式：中断响应/事件响应</p>
+<blockquote>
+<p>中断响应：CPU中断，执行中断函数</p>
+<p>事件响应：STM32对外部中断增加的一种额外的功能，当外部中断被触发时，除了可以触发中断外，也可以触发一个事件，此时，中断信号并不推向CPU而是推向其他外设，由其他外设响应</p>
+</blockquote>
+<h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/EXIT%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.png"></p>
+<p>每个GPIO口有16条线分别将每个引脚和AFIO（中断引脚选择）连接，AFIO从各GPIO的相同引脚(如PA0,PB0,PC0)中选择一个连在EXIT中</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/AFIO_1.png"></p>
+<p>上图为AFIO引脚中断选择的结构，每个数据选择器只能从PA0，PB0····等相同引脚中选择一个，接入EXIT</p>
+<p>•AFIO主要用于引脚复用功能的选择和重定义</p>
+<p>•在STM32中，AFIO主要完成两个任务：复用功能引脚重映射、中断引脚选择</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/EXIT_%E7%BB%93%E6%9E%84.png"></p>
+<p>上图为EXIT内部框图，信号由输入线进入边沿检测电路，与边沿检测电路相连的上升沿下降沿触发选择寄存器可以用来选择触发方式为上升沿下降沿还是双边沿触发。随后信号进入或门的输入端（与软件触发寄存器一起进入）。由于或门的性质（任意为一，值为一）所以边缘检测电路或者软件有中断事件发生均会使中断信号继续传递。之后中断信号可以触发中断，也可以触发事件。对于正常触发中断，会有一个请求挂起寄存器，通过请求挂起寄存器，我们可以知道中断信号来自于哪个通道。信号通过请求挂起寄存器，与中断屏蔽寄存器，一起进入与门。由于与门的性质（任意为零，输出为零）所以与门与中断屏蔽寄存器共同起到了开关的作用。如果中断屏蔽寄存器为1，那么输出必为一，即允许中断。如果中断屏蔽寄存器为0，那么输出必为0，即禁止中断。随后信号被输入至NVIC中断控制器</p>
+<p>对于触发事件，与正常中断同理，信号与事件屏蔽寄存器进入与门，同意中断后信号通过脉冲发射器传至其他外设。</p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><h4 id="外设介绍"><a href="#外设介绍" class="headerlink" title="外设介绍"></a>外设介绍</h4><p>旋转编码器介绍：</p>
+<p>•旋转编码器：用来测量位置、速度或旋转方向的装置，当其旋转轴旋转时，其输出端可以输出与旋转速度和方向对应的方波信号，读取方波信号的频率和相位信息即可得知旋转轴的速度和方向</p>
+<h2 id="Tim定时器"><a href="#Tim定时器" class="headerlink" title="Tim定时器"></a>Tim定时器</h2><h3 id="TIM定时器介绍"><a href="#TIM定时器介绍" class="headerlink" title="TIM定时器介绍"></a>TIM定时器介绍</h3><p>•TIM（Timer）定时器</p>
+<p>•定时器可以对输入的时钟进行计数，并在计数值达到设定值时触发中断</p>
+<p>•16位计数器、预分频器、自动重装寄存器的时基单元，在72MHz计数时钟下可以实现最大59.65s的定时</p>
+<blockquote>
+<p>赫兹，是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6/1189599?fromModule=lemma_inlink">国际单位制</a>中<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%A2%91%E7%8E%87/19505?fromModule=lemma_inlink">频率</a>的单位，它是每秒钟的周期性变动重复次数的计量。</p>
+</blockquote>
+<p>•不仅具备基本的定时中断功能，而且还包含内外时钟源选择、输入捕获、输出比较、编码器接口、主从触发模式等多种功能</p>
+<p>•根据复杂度和应用场景分为了高级定时器、通用定时器、基本定时器三种类型</p>
+<p>定时器分类：</p>
+<table>
+<thead>
+<tr>
+<th><strong>类型</strong></th>
+<th><strong>编号</strong></th>
+<th><strong>总线</strong></th>
+<th><strong>功能</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>高级定时器</td>
+<td>TIM1、TIM8</td>
+<td>APB2</td>
+<td>拥有通用定时器全部功能，并额外具有重复计数器、死区生成、互补输出、刹车输入等功能</td>
+</tr>
+<tr>
+<td>通用定时器</td>
+<td>TIM2、TIM3、TIM4、TIM5</td>
+<td>APB1</td>
+<td>拥有基本定时器全部功能，并额外具有内外时钟源选择、输入捕获、输出比较、编码器接口、主从触发模式等功能</td>
+</tr>
+<tr>
+<td>基本定时器</td>
+<td>TIM6、TIM7</td>
+<td>APB1</td>
+<td>拥有定时中断、主模式触发DAC的功能</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>STM32F103C8T6定时器资源：TIM1、TIM2、TIM3、TIM4</p>
+</blockquote>
+<h3 id="定时器结构"><a href="#定时器结构" class="headerlink" title="定时器结构"></a>定时器结构</h3><p>基本定时器：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E5%9F%BA%E6%9C%AC%E5%AE%9A%E6%97%B6%E5%99%A8.png"></p>
+<p>时基单元：由预分频器，CNT计数器，自动重装载寄存器构成，构成了最基本的计数计时功能。</p>
+<p>来自基准计数时钟的输入，将信号输入至PSC预分频器进行分频，输出分频后的信号到CNT计数器进行计数，计数时钟每来一个上升沿，计数时钟便加1，当与自动重装载寄存器所存的目标值相同时，便触发中断，清零计数器，计数器重新开始计时，这种中断被称为更新中断，中断信号会传至NVIC触发中断响应。当计数器的计数值与自动重装载寄存器所存的目标值相同时，也可以触发更新事件，即不触发中断，而是触发事件</p>
+<blockquote>
+<p>PSC预分频器：起到对输入端预分频的作用，譬如PSC寄存器参数为0，则分频系数为1，即不分频，输入端为72MHz，PSC预分频器输出也为72MHz。PSC寄存器参数为2，则分频系数为3，即分频，输入端为72MHz，PSC预分频器输出为24MHz。PSC寄存器参数为5，则分频系数为6，即分频，输入端为72MHz，PSC预分频器输出为12MHz。</p>
+<p>CNT计数器：用于计数</p>
+<p>自动重装载寄存器：用于存储目标值</p>
+</blockquote>
+<blockquote>
+<p>主模式触发DAC:</p>
+<p>可让内部的硬件在不受程序的控制下自动运行</p>
+</blockquote>
+<p>通用计时器：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E9%80%9A%E7%94%A8%E5%AE%9A%E6%97%B6%E5%99%A8.png"></p>
+<p>通用定时器是由基本定时器扩展而来的，所以基本定时器的基本结构为通用定时器的核心，在基本定时器的基础上，在输入输出源进行扩展，并添加一部分其他设备便组成了通用定时器。</p>
+<p>对于通用定时器，时基单元与基本定时器相同，但计数器增加了向下计数、向上向下计数</p>
+<p>在时钟源选择上，不仅可以选择内部时钟，也可以选择外部时钟，而外部时钟包括TiMx_ETR(位于PA0)、ITR信号（来自其他定时器通过TRGO通道的输出，可实现级联），TI1F_ED(来自TiMx_CH1),TI1FP1(来自CH1),TI2FP2(来自CH2)</p>
+<p>输出比较电路：可用于输出波形，驱动电机，分别对应CH1到CH4</p>
+<p>输入捕获电路：可用于测输入方波的频率等，分别对应CH1到CH4</p>
+<p>高级定时器：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E9%AB%98%E7%BA%A7%E5%AE%9A%E6%97%B6%E5%99%A8.png"></p>
+<p>高级定时器基本结构与通用定时器相同，在通用定时器的基础上增加了一些结构</p>
+<p>首先，在申请中断处增加一重复次数计数器，用于实现经历数个计数周期才实现一次更新中断</p>
+<p>定时中断基本结构：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E5%AE%9A%E6%97%B6%E4%B8%AD%E6%96%AD%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.png"></p>
+<p>定时器时序：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%AE%A1%E6%97%B6%E5%99%A8%E6%97%B6%E5%BA%8F.png"></p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%AE%A1%E6%97%B6%E5%99%A8%E6%97%B6%E5%BA%8F.png"></p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%AE%A1%E6%97%B6%E5%99%A8%E6%97%A0%E9%A2%84%E8%A3%85%E6%97%B6%E5%BA%8F.png"></p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9C%89%E9%A2%84%E8%A3%85%E6%97%B6%E5%BA%8F.png"></p>
+<p>RCC时钟树：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/RCC%E6%97%B6%E9%92%9F%E6%A0%91.jpg"></p>
+<p>RCC时钟树是STM32产生和配置时钟，并将配置好的时钟发送到各个外设的系统</p>
+<p>该时钟树可分为两部分：时钟的产生电路和时钟的分配电路</p>
+<p>SYSCLK(system clock):72MMHz的系统时钟</p>
+<p>● HSI振荡器时钟</p>
+<p> ● HSE振荡器时钟</p>
+<p> ● PLL时钟 </p>
+<p>这些设备有以下2种二级时钟源：</p>
+<p> ● 40kHz低速内部RC，可以用于驱动独立看门狗和通过程序选择驱动RTC。RTC用于从停机/ 待机模式下自动唤醒系统。 </p>
+<p>● 32.768kHz低速外部晶体也可用来通过程序选择驱动RTC(RTCCLK)。</p>
+<h3 id="TIM输出比较"><a href="#TIM输出比较" class="headerlink" title="TIM输出比较"></a>TIM输出比较</h3><p>OC（Output Compare）意为输出比较，他可以通过比较CNT与CCR寄存器值的大小关系，来对输出电平进行置1、置0或翻转的操作，用于输出一定频率和占空比的PWM波形。在定时器中，每个高级定时器和通用定时器都拥有4个输出比较通道，而高级定时器的前3个通道额外拥有死区生成和互补输出的功能。</p>
+<blockquote>
+<p>•PWM（Pulse Width Modulation）脉冲宽度调制</p>
+<p>•在具有惯性的系统中，可以通过对一系列脉冲的宽度进行调制，来等效地获得所需要的模拟参量，常应用于电机控速等领域</p>
+<p>•PWM参数：</p>
+<p>   频率 = 1 / TS      占空比 = TON / TS      分辨率 = 占空比变化步距</p>
+<p>PWM在本人看来，是通过平均速度的原理来进行输出的</p>
+<p>譬如，在STM32中，I\O口只能输出高低电平，以高电平5v低电平0v为例，那么正常情况下，I\O口只能输出5v和0v两种电压。但是通过PWM的方法，即我们假设一个周期譬如10ms，在这个周期中，我们全输出高电平，那么输出电压就是5v。但是如果5ms输出高电压，5ms输出低电压，那么输出电压就可以看作2.5v。</p>
+<p>PWM的频率</p>
+<p>是指在1秒钟内，信号从高电平到低电平再回到高电平的次数，也就是说一秒钟PWM有多少个周期，单位Hz。</p>
+<p>PWM的周期</p>
+<p>T=1/f，T是周期，f是频率。</p>
+<p>如果频率为50Hz ，也就是说一个周期是20ms，那么一秒钟就有 50次PWM周期。</p>
+<p>占空比</p>
+<p>是一个脉冲周期内，高电平的时间与整个周期时间的比例，单位是% (0%-100%)</p>
+<p>•CCR：捕获\比较寄存器</p>
+</blockquote>
+<p>输出比较通道的结构就如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E9%80%9A%E9%81%93(%E9%80%9A%E7%94%A8).png"></p>
+<p>对于输出比较功能，当CNT计数器的值大于等于CCR捕获比较寄存器时，便会向输出模式控制器传入信号，在输出模式控制器中，由OC1M寄存器控制输出模式，输出模式控制器根据输出模式来输出相应的oc1ref参考信号，oc1ref参考信号需要通过极性选择，极性选择是由CC1P寄存器进行控制，假如cc1p寄存器写0，那么oc1ref寄存器直接进入输出使能电路，假如cc1p寄存器写1，那么oc1ref寄存器通过非门，进行一次反转进入输出使能电路。在输出使能电路cc1e寄存器进行使能，随后输出信号</p>
+<p>对于输出比较功能的模式有下表：</p>
+<table>
+<thead>
+<tr>
+<th><strong>模式</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>冻结</td>
+<td>CNT=CCR时，REF保持为原状态</td>
+</tr>
+<tr>
+<td>匹配时置有效电平</td>
+<td>CNT=CCR时，REF置有效电平</td>
+</tr>
+<tr>
+<td>匹配时置无效电平</td>
+<td>CNT=CCR时，REF置无效电平</td>
+</tr>
+<tr>
+<td>匹配时电平翻转</td>
+<td>CNT=CCR时，REF电平翻转</td>
+</tr>
+<tr>
+<td>强制为无效电平</td>
+<td>CNT与CCR无效，REF强制为无效电平</td>
+</tr>
+<tr>
+<td>强制为有效电平</td>
+<td>CNT与CCR无效，REF强制为有效电平</td>
+</tr>
+<tr>
+<td>PWM模式1</td>
+<td>向上计数：CNT&lt;CCR时，REF置有效电平，CNT≥CCR时，REF置无效电平  向下计数：CNT&gt;CCR时，REF置无效电平，CNT≤CCR时，REF置有效电平</td>
+</tr>
+<tr>
+<td>PWM模式2</td>
+<td>向上计数：CNT&lt;CCR时，REF置无效电平，CNT≥CCR时，REF置有效电平  向下计数：CNT&gt;CCR时，REF置有效电平，CNT≤CCR时，REF置无效电平</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>有效电平为高电平，无效电平为低电平</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/PWM%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.png"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">求索</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://ymjjj.github.io/2023/11/21/stm32-bi-ji/">https://ymjjj.github.io/2023/11/21/stm32-bi-ji/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">求索</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                                    <span class="chip bg-color">单片机</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/11/21/stm32-bi-ji/">
+                    <div class="card-image">
+                        
+                        <img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/blog_photo2023-11-21.jpg" class="responsive-img" alt="STM32学习笔记">
+                        
+                        <span class="card-title">STM32学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            说是笔记，但是只是江科协的话的抄写，没什么只自己的思考
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    知识
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                        <span class="chip bg-color">单片机</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/01/24/2023-01-29-xin-nian/">
+                    <div class="card-image">
+                        
+                        <img src="https://s1.ax1x.com/2023/01/24/pSYdw0U.jpg" class="responsive-img" alt="新年快乐">
+                        
+                        <span class="card-title">新年快乐</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            新年快乐
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9A%8F%E6%83%B3/">
+                        <span class="chip bg-color">随想</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <span id="year">2023</span>
+            <a href="/about" target="_blank">求索</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:2170768863@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2170768863" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2170768863" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

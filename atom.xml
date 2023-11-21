@@ -6,7 +6,7 @@
   <link href="https://ymjjj.github.io/atom.xml" rel="self"/>
   
   <link href="https://ymjjj.github.io/"/>
-  <updated>2023-01-24T02:22:51.816Z</updated>
+  <updated>2023-11-21T13:47:14.982Z</updated>
   <id>https://ymjjj.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>STM32学习笔记</title>
+    <link href="https://ymjjj.github.io/2023/11/21/stm32-bi-ji/"/>
+    <id>https://ymjjj.github.io/2023/11/21/stm32-bi-ji/</id>
+    <published>2023-11-21T13:10:00.000Z</published>
+    <updated>2023-11-21T13:47:14.982Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;STM32&quot;&gt;&lt;a href=&quot;#STM32&quot; class=&quot;headerlink&quot; title=&quot;STM32&quot;&gt;&lt;/a&gt;STM32&lt;/h1&gt;&lt;h2 id=&quot;STM32概况&quot;&gt;&lt;a href=&quot;#STM32概况&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识" scheme="https://ymjjj.github.io/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="学习" scheme="https://ymjjj.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="单片机" scheme="https://ymjjj.github.io/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    
+    <category term="笔记" scheme="https://ymjjj.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>新年快乐</title>
