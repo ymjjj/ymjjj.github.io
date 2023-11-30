@@ -6,7 +6,7 @@
   <link href="https://ymjjj.github.io/atom.xml" rel="self"/>
   
   <link href="https://ymjjj.github.io/"/>
-  <updated>2023-11-30T07:01:44.923Z</updated>
+  <updated>2023-11-30T07:05:09.310Z</updated>
   <id>https://ymjjj.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计组复习</title>
+    <link href="https://ymjjj.github.io/2023/11/30/ji-zu-fu-xi/"/>
+    <id>https://ymjjj.github.io/2023/11/30/ji-zu-fu-xi/</id>
+    <published>2023-11-30T02:51:00.000Z</published>
+    <updated>2023-11-30T07:05:09.310Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;重要知识点&quot;&gt;&lt;a href=&quot;#重要知识点&quot; class=&quot;headerlink&quot; title=&quot;重要知识点&quot;&gt;&lt;/a&gt;重要知识点&lt;/h1&gt;&lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识" scheme="https://ymjjj.github.io/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="计算机组成原理" scheme="https://ymjjj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>23-11-29杂谈</title>
@@ -127,31 +152,6 @@
     <category term="线性代数" scheme="https://ymjjj.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
     <category term="学习" scheme="https://ymjjj.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://ymjjj.github.io/2023/01/16/ji-zu-fu-xi/"/>
-    <id>https://ymjjj.github.io/2023/01/16/ji-zu-fu-xi/</id>
-    <published>2023-01-16T02:51:00.000Z</published>
-    <updated>2023-11-29T11:28:13.751Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;重要知识点&quot;&gt;&lt;a href=&quot;#重要知识点&quot; class=&quot;headerlink&quot; title=&quot;重要知识点&quot;&gt;&lt;/a&gt;重要知识点&lt;/h1&gt;&lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="知识" scheme="https://ymjjj.github.io/categories/%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="计算机组成原理" scheme="https://ymjjj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
