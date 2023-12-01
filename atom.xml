@@ -6,7 +6,7 @@
   <link href="https://ymjjj.github.io/atom.xml" rel="self"/>
   
   <link href="https://ymjjj.github.io/"/>
-  <updated>2023-11-30T08:16:19.103Z</updated>
+  <updated>2023-12-01T09:29:20.042Z</updated>
   <id>https://ymjjj.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EXTI外部中断的应用-红外传感器计次</title>
+    <link href="https://ymjjj.github.io/2023/12/01/exti-wai-bu-zhong-duan-de-ying-yong-hong-wai-chuan-gan-qi-ji-ci/"/>
+    <id>https://ymjjj.github.io/2023/12/01/exti-wai-bu-zhong-duan-de-ying-yong-hong-wai-chuan-gan-qi-ji-ci/</id>
+    <published>2023-12-01T07:18:00.000Z</published>
+    <updated>2023-12-01T09:29:20.042Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;实验目的&quot;&gt;&lt;a href=&quot;#实验目的&quot; class=&quot;headerlink&quot; title=&quot;实验目的&quot;&gt;&lt;/a&gt;实验目的&lt;/h2&gt;&lt;p&gt;实现对射式红外传感器计次&lt;/p&gt;
+&lt;p&gt;效果：</summary>
+        
+      
+    
+    
+    
+    <category term="知识" scheme="https://ymjjj.github.io/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="学习" scheme="https://ymjjj.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="单片机" scheme="https://ymjjj.github.io/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    
+    <category term="笔记" scheme="https://ymjjj.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>期末前计划</title>
@@ -75,7 +105,7 @@
     <link href="https://ymjjj.github.io/2023/11/29/za-tan-2023-11-29/"/>
     <id>https://ymjjj.github.io/2023/11/29/za-tan-2023-11-29/</id>
     <published>2023-11-29T13:43:00.000Z</published>
-    <updated>2023-11-30T07:16:42.458Z</updated>
+    <updated>2023-11-30T13:52:44.631Z</updated>
     
     
       

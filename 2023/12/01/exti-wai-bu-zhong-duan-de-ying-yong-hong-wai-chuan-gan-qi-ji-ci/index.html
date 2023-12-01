@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="期末前计划, 路边驿站">
+    <meta name="keywords" content="EXTI外部中断的应用-红外传感器计次, 路边驿站">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>期末前计划 | 路边驿站</title>
+    <title>EXTI外部中断的应用-红外传感器计次 | 路边驿站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">期末前计划</h1>
+                    <h1 class="description center-align post-title">EXTI外部中断的应用-红外传感器计次</h1>
                 </div>
             </div>
         </div>
@@ -412,8 +412,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                                <span class="chip bg-color">单片机</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -424,8 +432,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                生活
+                            <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-category">
+                                知识
                             </a>
                         
                     </div>
@@ -437,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-11-30
+                    2023-12-01
                 </div>
                 
 
@@ -461,59 +469,104 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>俗话说得好，亡羊补牢，为时未晚。做了总比没做强。</p>
-<p>那么我要做的便是将假期之前的时间进行规划，以达到充分的利用。</p>
+                <h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><p>实现对射式红外传感器计次</p>
+<p>效果： 每触发一次对射式红外传感器，便进入外部中断，计数器加一，打印在OLED屏幕上</p>
+<h2 id="实验用品"><a href="#实验用品" class="headerlink" title="实验用品"></a>实验用品</h2><p>stm32f103c8t6最小系统板，面包板，跳线，杜邦线，对射式红外传感器，OLED显示屏</p>
+<h2 id="知识"><a href="#知识" class="headerlink" title="知识"></a>知识</h2><p>EXTI外部中断：</p>
+<p>功能：</p>
+<p>•EXTI可以监测指定GPIO口的电平信号，当其指定的GPIO口产生电平变化时，EXTI将立即向NVIC发出中断申请，经过NVIC裁决后即可中断CPU主程序，使CPU执行EXTI对应的中断程序</p>
+<p>特点：</p>
+<p>•支持的触发方式：上升沿/下降沿/双边沿/软件触发</p>
+<p>•支持的GPIO口：所有GPIO口，但相同的Pin不能同时触发中断</p>
+<p>•通道数：16个GPIO_Pin，外加PVD输出、RTC闹钟、USB唤醒、以太网唤醒</p>
+<blockquote>
+<p>在高中化学中我们知道结构决定性质，性质决定功能。那么EXTI也同理，他的功能和特点是由他的结构决定的。不同的是，化学中的物质都是由于他的结构使得他存在这些性质，被人们所发现。而EXTI外部中断则是人们根据自己的需求设计出这种结构，也就是被人们发明出来。</p>
+<p>于是我们接下来学习其结构，看看其结构是如何实现功能的。</p>
 </blockquote>
-<h2 id="待做事件："><a href="#待做事件：" class="headerlink" title="待做事件："></a>待做事件：</h2><p>总的来说有：4门考试，4个项目</p>
-<ul>
-<li><input disabled="" type="checkbox"> 概率论考试</li>
-<li><input disabled="" type="checkbox"> 软件工程考试</li>
-<li><input disabled="" type="checkbox"> 编译技术考试</li>
-<li><input disabled="" type="checkbox"> 计算机组成原理考试</li>
-<li><input disabled="" type="checkbox"> 编译技术实验</li>
-<li><input disabled="" type="checkbox"> C++</li>
-<li><input disabled="" type="checkbox"> 软工大作业</li>
-<li><input disabled="" type="checkbox"> 综合设计</li>
-</ul>
-<p>咱要做的便是复习和做好项目</p>
-<p>预计的时间：</p>
-<p>理想情况：</p>
-<p>概率论：每章2h，至少需要18h</p>
-<p>计组    ：每章3h，至少15h</p>
-<p>软工    ：java部分  10h</p>
-<p>​          软工部分  15h</p>
-<p>编译    ：每章3h大约24h</p>
-<p>编译实验    ：待定 预计1天</p>
-<p>软工    ：预计3天</p>
-<p>c++     ：预计5天</p>
-<p>课设    ：预计7天</p>
-<p>总共大约一个月的工作量</p>
-<p>咱们接下来便开始对任务进行细分：</p>
-<h2 id="细分"><a href="#细分" class="headerlink" title="细分"></a>细分</h2><p>概率论：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 第一章</li>
-<li><input disabled="" type="checkbox"> 第二章</li>
-<li><input disabled="" type="checkbox"> 第三章</li>
-<li><input disabled="" type="checkbox"> 第四章</li>
-<li><input disabled="" type="checkbox"> 第五章</li>
-<li><input disabled="" type="checkbox"> 第六章</li>
-<li><input disabled="" type="checkbox"> 第七章</li>
-<li><input disabled="" type="checkbox"> 第八章</li>
-<li><input disabled="" type="checkbox"> 第九章</li>
-</ul>
-<p>计组：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 1章</li>
-<li><input disabled="" type="checkbox"> 2章</li>
-<li><input disabled="" type="checkbox"> 3章</li>
-<li><input disabled="" type="checkbox"> 4章</li>
-<li><input disabled="" type="checkbox"> 5章</li>
-</ul>
-<p>软工:</p>
-<p>java:</p>
-<p>编译：</p>
-<h2 id="执行方案"><a href="#执行方案" class="headerlink" title="执行方案"></a>执行方案</h2><p>每天至少完成复习计划中的2个部分，项目暂时不好度量，日后再说。</p>
+<p>EXTI结构：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/EXIT%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.png"></p>
+<p>工作原理：</p>
+<p>每个GPIO口有16条线分别将每个引脚和AFIO（中断引脚选择）连接，AFIO从各GPIO的相同引脚(如PA0,PB0,PC0)中选择一个连在EXIT中，EXTI向NVIC发出中断申请，经过NVIC裁决后即可中断CPU主程序，使CPU执行EXTI对应的中断程序</p>
+<p>AFIO结构：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/AFIO_1.png"></p>
+<p>工作原理：</p>
+<p>上图为AFIO引脚中断选择的结构，每个数据选择器只能从PA0，PB0····等相同引脚中选择一个，接入EXIT</p>
+<p>EXTI边缘检测与控制：</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/EXIT_%E7%BB%93%E6%9E%84.png"></p>
+<p>上图为EXIT内部框图，信号由输入线进入边沿检测电路，与边沿检测电路相连的上升沿下降沿触发选择寄存器可以用来选择触发方式为上升沿下降沿还是双边沿触发。随后信号进入或门的输入端（与软件触发寄存器一起进入）。由于或门的性质（任意为一，值为一）所以边缘检测电路或者软件有中断事件发生均会使中断信号继续传递。之后中断信号可以触发中断，也可以触发事件。对于正常触发中断，会有一个请求挂起寄存器，通过请求挂起寄存器，我们可以知道中断信号来自于哪个通道。信号通过请求挂起寄存器，与中断屏蔽寄存器，一起进入与门。由于与门的性质（任意为零，输出为零）所以与门与中断屏蔽寄存器共同起到了开关的作用。如果中断屏蔽寄存器为1，那么输出必为一，即允许中断。如果中断屏蔽寄存器为0，那么输出必为0，即禁止中断。随后信号被输入至NVIC中断控制器</p>
+<h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><p>根据该实验的内容，我们可以将该程序分为两个模块：</p>
+<p>计数器模块，OLED模块</p>
+<p>其中OLED模块直接引用他人的库，不需自己编写。</p>
+<p>需要我们编写的是：计数器模块</p>
+<p>计数器模块：</p>
+<blockquote>
+<p>就如前文所说的结构决定性质，性质决定功能。EXTI的结构也决定了我们所涉及到的函数</p>
+</blockquote>
+<p>首先必定是要进行初始化,将计数器所用的资源配置好。</p>
+<p>根据EXTI的结构，我们需要配置：</p>
+<p>RCC时钟开启，GPIO，AFIO,EXTI,NVIC初始化配置</p>
+<p>涉及的函数：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span><span class="token class-name">uint32_t</span> RCC_APB2Periph<span class="token punctuation">,</span> FunctionalState NewState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">GPIO_Init</span><span class="token punctuation">(</span>GPIOB<span class="token punctuation">,</span> <span class="token operator">&amp;</span>GPIO_InitStructure<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span>RCC_APB2Periph_AFIO<span class="token punctuation">,</span> ENABLE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">GPIO_EXTILineConfig</span><span class="token punctuation">(</span>GPIO_PortSourceGPIOB<span class="token punctuation">,</span>GPIO_PinSource14<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">EXTI_Init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>EXTI_InitStruct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">NVIC_PriorityGroupConfig</span><span class="token punctuation">(</span>NVIC_PriorityGroup_2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">NVIC_Init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>NVIC_InitStruct<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>随后编写中断函数：</p>
+<p>中断函数的名称都是固定的，本次用到的是</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">EXTI15_10_IRQHandler</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在其中用EXTI_GetITStatus(EXTI_Line14)函数判断中断是否来自PB14，是就进入中断</p>
+<p>计数器模块：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"stm32f10x.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"OLED.h"</span></span>
+<span class="token class-name">uint16_t</span> count_number<span class="token operator">=</span><span class="token number">0</span> <span class="token punctuation">;</span> 
+<span class="token keyword">void</span> <span class="token function">CountSenser_Init</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token comment">/*初始化GPIOB*/</span>
+     <span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span>RCC_APB2Periph_GPIOB<span class="token punctuation">,</span>ENABLE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	GPIO_InitTypeDef<span class="token operator">*</span> GPIO_InitStruct<span class="token punctuation">;</span>
+	GPIO_InitStruct<span class="token operator">-&gt;</span>GPIO_Mode<span class="token operator">=</span>GPIO_Mode_IPU<span class="token punctuation">;</span>
+	GPIO_InitStruct<span class="token operator">-&gt;</span>GPIO_Pin<span class="token operator">=</span>GPIO_Pin_14<span class="token punctuation">;</span>
+	GPIO_InitStruct<span class="token operator">-&gt;</span>GPIO_Speed<span class="token operator">=</span>GPIO_Speed_50MHz<span class="token punctuation">;</span>
+	 <span class="token function">GPIO_Init</span><span class="token punctuation">(</span>GPIOB<span class="token punctuation">,</span>GPIO_InitStruct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">/*初始化AFIO*/</span>
+	 <span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span>RCC_APB2Periph_AFIO<span class="token punctuation">,</span> ENABLE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	 <span class="token function">GPIO_EXTILineConfig</span><span class="token punctuation">(</span>GPIO_PortSourceGPIOB<span class="token punctuation">,</span>GPIO_PinSource14<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">/*初始化EXIT*/</span>
+	 EXTI_InitTypeDef EXTI_InitStruct<span class="token punctuation">;</span>
+	 EXTI_InitStruct<span class="token punctuation">.</span>EXTI_Line<span class="token operator">=</span>EXTI_Line14 <span class="token punctuation">;</span>
+	 EXTI_InitStruct<span class="token punctuation">.</span>EXTI_LineCmd<span class="token operator">=</span>ENABLE <span class="token punctuation">;</span>
+	 EXTI_InitStruct<span class="token punctuation">.</span>EXTI_Mode<span class="token operator">=</span>EXTI_Mode_Interrupt<span class="token punctuation">;</span>
+	 EXTI_InitStruct<span class="token punctuation">.</span>EXTI_Trigger<span class="token operator">=</span>EXTI_Trigger_Falling<span class="token punctuation">;</span>
+	 <span class="token function">EXTI_Init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>EXTI_InitStruct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	 <span class="token comment">/*初始化NVIC*/</span>
+	 <span class="token function">NVIC_PriorityGroupConfig</span><span class="token punctuation">(</span>NVIC_PriorityGroup_2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	 NVIC_InitTypeDef NVIC_InitStruct<span class="token punctuation">;</span>
+	 NVIC_InitStruct<span class="token punctuation">.</span>NVIC_IRQChannel<span class="token operator">=</span>EXTI15_10_IRQn   <span class="token punctuation">;</span>
+	 NVIC_InitStruct<span class="token punctuation">.</span>NVIC_IRQChannelCmd<span class="token operator">=</span>ENABLE<span class="token punctuation">;</span>
+	 NVIC_InitStruct<span class="token punctuation">.</span>NVIC_IRQChannelPreemptionPriority<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	 NVIC_InitStruct<span class="token punctuation">.</span>NVIC_IRQChannelSubPriority<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+	
+	 <span class="token function">NVIC_Init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>NVIC_InitStruct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">EXTI15_10_IRQHandler</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">EXTI_GetITStatus</span><span class="token punctuation">(</span>EXTI_Line14<span class="token punctuation">)</span><span class="token operator">==</span>SET<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">GPIO_ReadInputDataBit</span><span class="token punctuation">(</span>GPIOB<span class="token punctuation">,</span> GPIO_Pin_14<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			count_number<span class="token operator">++</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token function">EXTI_ClearITPendingBit</span><span class="token punctuation">(</span> EXTI_Line14<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">uint16_t</span> <span class="token function">CountSensor_Get</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> count_number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -540,7 +593,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ymjjj.github.io/2023/11/30/qi-mo-qian-ji-hua/">https://ymjjj.github.io/2023/11/30/qi-mo-qian-ji-hua/</a>
+                    <a href="https://ymjjj.github.io/2023/12/01/exti-wai-bu-zhong-duan-de-ying-yong-hong-wai-chuan-gan-qi-ji-ci/">https://ymjjj.github.io/2023/12/01/exti-wai-bu-zhong-duan-de-ying-yong-hong-wai-chuan-gan-qi-ji-ci/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -578,8 +631,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                                    <span class="chip bg-color">单片机</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
                         </div>
@@ -623,9 +684,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/12/01/exti-wai-bu-zhong-duan-de-ying-yong-hong-wai-chuan-gan-qi-ji-ci/">
                     <div class="card-image">
@@ -643,9 +705,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -658,6 +720,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -684,18 +747,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/11/30/ji-zu-fu-xi/">
+                <a href="/2023/11/30/qi-mo-qian-ji-hua/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/02charaice20_lets%20%20playing%20outside!_113753103_p0.png" class="responsive-img" alt="计组复习">
                         
-                        <span class="card-title">计组复习</span>
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="期末前计划">
+                        
+                        <span class="card-title">期末前计划</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            早就吵吵要做计划了，结果一直拖到现在。。。真差劲，不过做了总比没做好
                         
                     </div>
                     <div class="publish-info">
@@ -706,8 +770,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    知识
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
                                 </a>
                             
                             
@@ -717,8 +781,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">计算机组成原理</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
