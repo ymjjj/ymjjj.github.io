@@ -6,7 +6,7 @@
   <link href="https://ymjjj.github.io/atom.xml" rel="self"/>
   
   <link href="https://ymjjj.github.io/"/>
-  <updated>2023-12-01T09:29:20.042Z</updated>
+  <updated>2023-12-01T13:21:59.992Z</updated>
   <id>https://ymjjj.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://ymjjj.github.io/2023/12/01/java/"/>
+    <id>https://ymjjj.github.io/2023/12/01/java/</id>
+    <published>2023-12-01T13:20:05.061Z</published>
+    <updated>2023-12-01T13:21:59.992Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;title: java部分笔记&lt;br&gt;date: 2023-12-2 11:10:00&lt;br&gt;summary: 学java时记得部分笔记&lt;br&gt;categories: 知识&lt;br&gt;tags:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GPIO库函数及其功能</title>
+    <link href="https://ymjjj.github.io/2023/12/01/gpio-ku-han-shu-ji-qi-gong-neng/"/>
+    <id>https://ymjjj.github.io/2023/12/01/gpio-ku-han-shu-ji-qi-gong-neng/</id>
+    <published>2023-12-01T09:37:00.000Z</published>
+    <updated>2023-12-01T09:45:14.383Z</updated>
+    
+    
+    
+    
+    <category term="知识" scheme="https://ymjjj.github.io/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="学习" scheme="https://ymjjj.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="单片机" scheme="https://ymjjj.github.io/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    
+    <category term="笔记" scheme="https://ymjjj.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>EXTI外部中断的应用-红外传感器计次</title>
