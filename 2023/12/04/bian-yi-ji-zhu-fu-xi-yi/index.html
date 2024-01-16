@@ -483,6 +483,30 @@
 <p>   链接器（linker）能够解决外部内存地址的问题</p>
 <p>   加载器（loader）把所有的可执行目标文件放到内存中执行</p>
 </blockquote>
+<h3 id="1-2-编译器的结构"><a href="#1-2-编译器的结构" class="headerlink" title="1.2 编译器的结构"></a>1.2 编译器的结构</h3><p><strong>编译器 = 分析部分（作为编译器的前端） + 综合部分（作为编译器的后端）</strong></p>
+<p>分析部分：</p>
+<p>1、将源程序分解为多个组成要素。</p>
+<p>2、将组成要素通过语法结构创建该源程序的一个中间表示。</p>
+<p>3、检查源程序有没有按照正确的语法结构和语义，如果没有则必须提供有用的信息供用户改正。</p>
+<p>4、收集有关源程序的信息存放在一个称为符号表的数据结构。</p>
+<p>5、符号表和中间表示形式一起传送给综合部分。</p>
+<p>综合部分：</p>
+<p>根据中间表示和符号表中的信息来构造用户期待的目标程序。</p>
+<p><strong>编译器的步骤</strong></p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89.jpg"></p>
+<h4 id="1-2-1-词法分析"><a href="#1-2-1-词法分析" class="headerlink" title="1.2.1 词法分析"></a>1.2.1 词法分析</h4><p><strong>词法分析器：读入组成源程序的字符流，并且将它们组织成为有意义的词素（lexeme）的序列。词法分析器会将每个词素生成如下形式的词法单元（token）作为输出:</strong></p>
+<p><strong>&lt;token-name, attribute-value&gt;</strong></p>
+<p><strong>词法单元生成后会被传送到下一个步骤，即语法分析。</strong></p>
+<p>**词法单元 &lt;token-name, attribute-value&gt;**：</p>
+<p>第一个分量<strong>token-name</strong>是一个由语法分析步骤使用的抽象符号，</p>
+<p>而第二个分量<strong>attribute-value</strong>指向<strong>符号表</strong>中关于这个词法单元的条目。符号表条目的信息会被<strong>语义分析</strong>和<strong>代码生成</strong>步骤使用。</p>
+<h4 id="1-2-2-语法分析"><a href="#1-2-2-语法分析" class="headerlink" title="1.2.2 语法分析"></a>1.2.2 语法分析</h4><p>编译器的第2个步骤：<strong>语法分析（syntax analysis）</strong>或解析（parsing）。<strong>语法分析器使用由词法分析器生成的各个词法单元的第一个分量来创建树形的中间表示</strong>。该<strong>中间表示</strong>给出了词法分析产生的<strong>词法单元流</strong>的<strong>语法结构</strong>。一个常用的表示方法是<strong>语法树（syntax tree），树中的每个内部结点表示一个运算，而该结点的子结点表示该运算的分量</strong>。在图1-7中，词法单元流（1. 2）对应的语法树被显示为语法分析器的输出。</p>
+<p><img src="https://raw.githubusercontent.com/ymjjj/picture-bed/main/%E5%9B%BE1-7.jpg"></p>
+<p><strong>小结：</strong></p>
+<p><strong>1）语法分析器的作用：根据语法结构，将各个词法单元的第一个分量创建成树形的中间表示，并且将中间表示输出。</strong></p>
+<p><strong>2）中间表示=词法单元流（各个词法单元里的第一个分量）+语法结构</strong></p>
+<p><strong>3）中间表示一般常用的是语法树。</strong></p>
+<p><strong>4）语法树中每个内部结点表示运算，而该结点的子结点表示该运算的分量。</strong></p>
 
                 
             </div>
@@ -588,39 +612,49 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/12/04/bian-yi-ji-zhu-fu-xi-yi/">
+                <a href="/2024/01/15/you-guan-chong-zi-de-yi-xie-jie-shao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="有关种子的一些介绍">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">有关种子的一些介绍</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            追番时用到了种子，搜索了一些关于种子的基础知识。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-15
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            求索
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">知识</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -794,7 +828,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2023</span>
+                <span id="year">2023-2024</span>
             
             <span id="year">2023</span>
             <a href="/about" target="_blank">求索</a>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 路边驿站">
+    <meta name="keywords" content="有关种子的一些介绍, 路边驿站">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 路边驿站</title>
+    <title>有关种子的一些介绍 | 路边驿站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2023/01/12/pSuzS8P.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">有关种子的一些介绍</h1>
                 </div>
             </div>
         </div>
@@ -412,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">知识</span>
                             </a>
                         
                     </div>
@@ -424,8 +424,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                生活
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
                             </a>
                         
                     </div>
@@ -437,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-01-12
+                    2024-01-15
                 </div>
                 
 
@@ -461,15 +461,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p><em>写于2023年1月12日</em></p>
-</blockquote>
-<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><p>前言：折腾了半天，终于把个人博客 <del>抄</del> 建完了 。我写下这篇文章来介绍一些关于我建站的缘由以及对该站的期望。</p>
-<h2 id="建站的缘由"><a href="#建站的缘由" class="headerlink" title="建站的缘由"></a>建站的缘由</h2><p>在上一学期摸鱼的时候，我在网上看到大量的个人博客，看到大佬们炫酷的个人博客界面我感到十分的羡慕，并且也希望着拥有一个属于自己的个人博客。故而，便有了路边驿站的诞生。</p>
-<h2 id="我要写些什么？"><a href="#我要写些什么？" class="headerlink" title="我要写些什么？"></a>我要写些什么？</h2><p>在这个博客上，我希望能够定时发一些我所学的知识的总结，一些怕忘记的知识的记录，一本好书的摘抄或感想，一点对生活的感悟······</p>
-<p>重要的是，我想记录下我的生活。</p>
-<p>我会尽力，争取至少每月一更。</p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>在写这篇博文的时候，站长我不过是一名垃圾的大一学生，就读于电子科技大学。我希望通过这个博客来督促一下我自己，加油！</p>
+                <h2 id="BT种子（BitTorent）"><a href="#BT种子（BitTorent）" class="headerlink" title="BT种子（BitTorent）"></a>BT种子（<strong>BitTorent</strong>）</h2><p>BitTorrent是一种点对点的文件共享协议，可以通过网络发送和接受文件，现在是传输音频文件，电影，电视节目和视频剪辑最常用的协议之一。 它包含了文件元数据、Tracker服务器地址和文件哈希值等信息的小文件，用于在P2P网络中共享文件。我们需要在电脑上安装BitTorrent客户端（迅雷、BitTorent），才能使用BitTorrent协议进行P2P共享传输文件。</p>
+<h3 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">1.文件的哈希值：种子文件中包含了文件的哈希值，它是通过对文件分块进行哈希计算得到的，用于验证文件的完整性和唯一性。
+2.文件名：种子文件中包含了文件的名称，用于显示下载文件的名称。
+3.文件大小：种子文件中包含了文件的大小，用于显示下载文件的大小。
+4.Tracker地址：Tracker是一种服务器，它用于协调P2P网络中的数据传输，种子文件中包含了Tracker服务器的地址，用于连接到Tracker服务器，获取其他用户的IP地址和端口号，以进行P2P文件下载。
+当用户下载种子文件后，下载客户端会自动解析种子文件中的信息，连接到Tracker服务器获取其他用户的IP地址和端口号，并通过P2P协议与其他用户建立连接，下载文件。其中，下载客户端会通过文件的哈希值验证文件的完整性和正确性，如果文件有损坏或错误，下载客户端会自动重新下载损坏或错误的部分，以确保文件的完整性。
+总的来说，种子文件通过将文件分块，并计算哈希值，打包成一个小文件，方便了文件在P2P网络中的传输和共享，使得用户可以通过P2P协议下载文件，同时也使得P2P网络更加去中心化和分散化。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>BitTorrent应用程序从多个其他对等计算机上下载文件，然后编译成一个完成的文件。</p>
+<p>更详细的原理为：</p>
+<p>在生成种子文件时，文件被分为多个部分，并且每个部分都被计算出了哈希值。这些哈希值和文件的元数据被打包到一起，形成了一个种子文件。这个种子文件之后会被其他用户打开，通过Tracker服务器，获得其他用户的IP地址和端口号，以进行P2P文件下载。</p>
+<h2 id="磁力链接"><a href="#磁力链接" class="headerlink" title="磁力链接"></a><strong>磁力链接</strong></h2><p>磁力链接（Magnet link）是一种基于P2P文件共享技术的链接形式，它允许用户通过单个链接来直接下载一个或多个文件，而无需下载一个种子文件。磁力链接的原理是利用文件的哈希值和文件名等信息来标识文件，这些信息被编码成一个独一无二的字符串，称为磁力链接，通过这个链接可以直接下载文件。</p>
+<h3 id="构成-1"><a href="#构成-1" class="headerlink" title="构成"></a>构成</h3><pre class="line-numbers language-text" data-language="text"><code class="language-text">磁力链接的格式:
+"magnet:?xt=urn:btih:哈希值&amp;dn=文件名&amp;tr=Tracker服务器地址"。
+其中，xt表示链接类型，urn:btih表示BT种子哈希值，dn表示文件名，tr表示Tracker服务器地址。
+
+1.文件的哈希值：文件的哈希值是通过对文件进行哈希计算得到的一个固定长度的唯一标识符，可以用来验证文件的完整性和唯一性。
+2.文件名：磁力链接中包含文件的名称，用于显示下载文件的名称。
+3.文件大小：磁力链接中包含文件的大小，用于显示下载文件的大小。
+4.Tracker地址：Tracker是一种服务器，它用于协调P2P网络中的数据传输，磁力链接中包含Tracker地址，用于连接到Tracker服务器，获取其他用户的IP地址和端口号，以进行P2P文件下载。
+当用户点击磁力链接时，下载客户端会自动解析磁力链接中的信息，连接到Tracker服务器获取其他用户的IP地址和端口号，并通过P2P协议与其他用户建立连接，下载文件。由于磁力链接不需要种子文件，因此它更加方便和易于分享，已经成为了现代P2P文件共享的主流方式之一。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h3><p>磁力链接通过将利用种子文件下载的关键信息都集成在链接中，使得用户只需要通过磁力链接便可以进行下载了。</p>
+<h2 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h2><h3 id="p2p协议"><a href="#p2p协议" class="headerlink" title="p2p协议"></a>p2p协议</h3><p>P2P 全称是 Peer to Peer ,翻译成中文”地位对等的两个节点之间“，亦或者”点对点“，是一种网络协议</p>
+<p>P2P 打破了传统的 C/S 模式，在网络中的每个结点的地位都是对等的。每个结点既充当服务器，为其他结点提供服务，同时也享用其他结点提供的服务。</p>
+<p>在下载时，用户并不是从中央服务器下载，而是从其他下载的用户那里下载。通过这种下载方式，一个文件下载的人数越多，带宽也就越大，速度就越快。</p>
+<h3 id="文件元数据"><a href="#文件元数据" class="headerlink" title="文件元数据"></a>文件元数据</h3><p><strong>1、元数据(metadata):用来描述一个文件的特征的系统数据<br>2、数据：泛指普通文件中的实际数据；</strong></p>
 
                 
             </div>
@@ -496,7 +516,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ymjjj.github.io/2023/01/12/zhi-san-ge-yue-hou-de-zi-ji/">https://ymjjj.github.io/2023/01/12/zhi-san-ge-yue-hou-de-zi-ji/</a>
+                    <a href="https://ymjjj.github.io/2024/01/15/you-guan-chong-zi-de-yi-xie-jie-shao/">https://ymjjj.github.io/2024/01/15/you-guan-chong-zi-de-yi-xie-jie-shao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -534,8 +554,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">知识</span>
                                 </a>
                             
                         </div>
@@ -583,13 +603,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/01/12/bi-ji/">
+                <a href="/2024/01/16/git-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -600,16 +620,12 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-16
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            求索
                             
                         </span>
                     </div>
@@ -621,47 +637,35 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/01/12/zhi-san-ge-yue-hou-de-zi-ji/">
+                <a href="/2023/12/04/bian-yi-ji-zhu-fu-xi-yi/">
                     <div class="card-image">
                         
-                        <img src="https://s1.ax1x.com/2023/01/12/pSuzS8P.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">Hello World</span>
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            小站建成了，随便写写
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                    生活
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            求索
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
-                    </a>
-                    
                 </div>
                 
             </div>
