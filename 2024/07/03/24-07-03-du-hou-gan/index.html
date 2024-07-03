@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="路边驿站">
+    <meta name="keywords" content="24-07-03读后感-底层linux运行时的历史, 路边驿站">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>路边驿站</title>
+    <title>24-07-03读后感-底层linux运行时的历史 | 路边驿站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="路边驿站" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="路边驿站" type="application/atom+xml">
 </head>
 
 
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">24-07-03读后感-底层linux运行时的历史</h1>
                 </div>
             </div>
         </div>
@@ -410,12 +410,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-category">
+                                知识
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -424,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-16
+                    2024-07-03
                 </div>
                 
 
@@ -448,42 +469,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: 有关种子的一些介绍<br>date: 2024-1-15 21:30:00<br>summary: 有关于git的学习笔记<br>categories: 技术<br>tags:  </p>
-<ul>
-<li>知识</li>
-<li>git</li>
-</ul>
-<hr>
-<h1 id="git学习笔记"><a href="#git学习笔记" class="headerlink" title="git学习笔记"></a>git学习笔记</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>git是一种免费开源的分布式版本控制系统。</p>
-<blockquote>
-<p><strong>版本控制是什么？</strong></p>
-<p>版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。简单来说就是用于管理多人协同开发项目的技术。</p>
-<p>笔者认为，版本控制就是记录文件的各个历史版本。</p>
-<p><strong>版本控制系统</strong>（Version Control System，VCS）是一种软件，能够随着时间的推进记录一系列文件的变化，方便以后随时回退到某个版本。</p>
-</blockquote>
-<blockquote>
-<p>分布式版本控制系统（简称DVCS）是一种允许每个团队成员在他们自己的计算机上拥有代码仓库的完整拷贝，这样他们可以在本地进行代码的提交、创建分支和代码合并。与传统的集中式版本控制相比，服务器不需要为每个代码分支单独保存一个文件，它仅保存每次代码提交之间的差异。</p>
-</blockquote>
-<h2 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h2><p>配置用户名:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"Your Name"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>配置邮箱  :</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"mail@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>存储配置  :</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> credential store<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>–global 参数表示这台机器上所有的Git仓库都会使用这个配置</p>
-</blockquote>
-<h2 id="新建库"><a href="#新建库" class="headerlink" title="新建库"></a>新建库</h2><p>版本库，又称仓库，英文为repository,简写为repo，是git用于版本控制的数据库，能记录其中文件的增删查改。</p>
-<p>库可以被简单的理解为一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改，删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻还可以将文件”还原”。</p>
-<p>创建版本库就是使得一个文件目录能被git管理。我们用git init指令来实现</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>在使用git init后，该库会有一文件夹.git</p>
-<p>这个文件夹记录了该库的所有数据，如增删查改的记录等。</p>
+                <h1 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h1><p>原文链接：<a target="_blank" rel="noopener" href="https://opensource.com/article/18/1/history-low-level-container-runtimes">A history of low-level Linux container runtimes | Opensource.com</a></p>
+<p>作者介绍了容器的特征：</p>
+<ol>
+<li>资源约束(Resource constraints)：利用cgroups实现，控制和隔离容器中进程对资源使用。使进程只使用划分给他的资源。</li>
+<li>安全约束(Security constraints)：容器不会进行容器之间的攻击，也不会进行容器对主机的攻击，通过SELinux等实现。</li>
+<li>虚拟分离(Virtual separation)    :  容器内进程只能看见容器内的进程，无法看见容器外进程，通过namespaces实现。</li>
+</ol>
+<p>符合以上特征，即被cgroup进行资源管理，有安全约束，且运行在自己的名字空间中的进程都可被称作容器。</p>
 
                 
             </div>
@@ -510,7 +503,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ymjjj.github.io/2024/01/16/git-xue-xi-bi-ji/">https://ymjjj.github.io/2024/01/16/git-xue-xi-bi-ji/</a>
+                    <a href="https://ymjjj.github.io/2024/07/03/24-07-03-du-hou-gan/">https://ymjjj.github.io/2024/07/03/24-07-03-du-hou-gan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -547,7 +540,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -594,13 +599,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2024/01/16/git-xue-xi-bi-ji/">
+                <a href="/2024/07/03/24-07-03-du-hou-gan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="24-07-03读后感-底层linux运行时的历史">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">24-07-03读后感-底层linux运行时的历史</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -611,17 +616,37 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-03
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            求索
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    知识
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -632,19 +657,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/01/15/you-guan-chong-zi-de-yi-xie-jie-shao/">
+                <a href="/2024/01/15/git-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="有关种子的一些介绍">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="git学习笔记">
                         
-                        <span class="card-title">有关种子的一些介绍</span>
+                        <span class="card-title">git学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            追番时用到了种子，搜索了一些关于种子的基础知识。
+                            有关于git的学习笔记
                         
                     </div>
                     <div class="publish-info">
@@ -668,6 +693,10 @@
                     
                     <a href="/tags/%E7%9F%A5%E8%AF%86/">
                         <span class="chip bg-color">知识</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>

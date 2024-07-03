@@ -6,7 +6,7 @@
   <link href="https://ymjjj.github.io/atom.xml" rel="self"/>
   
   <link href="https://ymjjj.github.io/"/>
-  <updated>2024-01-16T04:54:55.505Z</updated>
+  <updated>2024-07-03T14:49:12.014Z</updated>
   <id>https://ymjjj.github.io/</id>
   
   <author>
@@ -17,24 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://ymjjj.github.io/2024/01/16/git-xue-xi-bi-ji/"/>
-    <id>https://ymjjj.github.io/2024/01/16/git-xue-xi-bi-ji/</id>
-    <published>2024-01-16T01:28:02.215Z</published>
-    <updated>2024-01-16T04:54:55.505Z</updated>
+    <title>24-07-03读后感-底层linux运行时的历史</title>
+    <link href="https://ymjjj.github.io/2024/07/03/24-07-03-du-hou-gan/"/>
+    <id>https://ymjjj.github.io/2024/07/03/24-07-03-du-hou-gan/</id>
+    <published>2024-07-03T07:18:00.000Z</published>
+    <updated>2024-07-03T14:49:12.014Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;title: 有关种子的一些介绍&lt;br&gt;date: 2024-1-15 21:30:00&lt;br&gt;summary: 有关于git的学习笔记&lt;br&gt;categories: 技术&lt;br&gt;tags: </summary>
+    <summary type="html">&lt;h1 id=&quot;读后感&quot;&gt;&lt;a href=&quot;#读后感&quot; class=&quot;headerlink&quot; title=&quot;读后感&quot;&gt;&lt;/a&gt;读后感&lt;/h1&gt;&lt;p&gt;原文链接：&lt;a</summary>
         
       
     
     
     
+    <category term="知识" scheme="https://ymjjj.github.io/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="学习" scheme="https://ymjjj.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="笔记" scheme="https://ymjjj.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="linux" scheme="https://ymjjj.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git学习笔记</title>
+    <link href="https://ymjjj.github.io/2024/01/15/git-xue-xi-bi-ji/"/>
+    <id>https://ymjjj.github.io/2024/01/15/git-xue-xi-bi-ji/</id>
+    <published>2024-01-15T13:30:00.000Z</published>
+    <updated>2024-02-05T08:14:08.993Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;git学习笔记&quot;&gt;&lt;a href=&quot;#git学习笔记&quot; class=&quot;headerlink&quot; title=&quot;git学习笔记&quot;&gt;&lt;/a&gt;git学习笔记&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://ymjjj.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="知识" scheme="https://ymjjj.github.io/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="git" scheme="https://ymjjj.github.io/tags/git/"/>
     
   </entry>
   
